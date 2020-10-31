@@ -1,0 +1,19 @@
+apiVersion : apps/v1
+kind: Deployment
+metadata:
+  name: "welyaks2-e6f7"
+spec:
+  replicas: 2
+  selector:
+    matchLabels:
+      app: "welyaks2-e6f7"
+  template:
+    metadata:
+      labels:
+        app: "welyaks2-e6f7"
+    spec:
+      containers:
+        - name: "welyaks2-e6f7"
+          image: "aksworkshopwelyacr.azurecr.io/welyaks2"
+          ports:
+          - containerPort: 80
